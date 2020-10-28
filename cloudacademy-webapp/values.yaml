@@ -3,7 +3,8 @@ replicaCount: 2
 image:
   repository: nginx
   pullPolicy: IfNotPresent
-  tag: ""
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ''
 
 service:
   type: ClusterIP
@@ -14,4 +15,4 @@ autoscaling:
 
 nginx:
   conf:
-    message: "CloudAcademy DevOps 2020 v1"
+    message: 'CloudAcademy DevOps 2020 v1'
